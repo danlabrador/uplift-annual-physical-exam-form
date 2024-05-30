@@ -32,7 +32,7 @@ export const APEForm = () => {
           <div className="flex w-full justify-between">
             <div style={{ display: currentPage === 1 ? 'block' : 'none' }}></div>
             <Button
-              variant="outline"
+              variant="secondary"
               onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
               style={{ display: currentPage === 1 ? 'none' : 'block' }}
             >
@@ -40,7 +40,7 @@ export const APEForm = () => {
             </Button>
 
             <Button
-              variant="outline"
+              variant="secondary"
               onClick={() => setCurrentPage(prev => Math.min(3, prev + 1))}
               disabled={currentPage === 3}
               style={{ display: currentPage === 3 ? 'none' : 'block' }}
