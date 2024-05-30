@@ -2,6 +2,9 @@ import { Card, CardFooter, CardHeader } from './ui/Card';
 import { useState } from 'react';
 import { Button } from './ui/Button';
 import { APEFormPage1 } from './APEFormPage1';
+import { APEFormPage2 } from './APEFormPage2';
+import { APEFormPage3 } from './APEFormPage3';
+import { APEFormPage4 } from './APEFormPage4';
 
 export const APEForm = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -12,13 +15,16 @@ export const APEForm = () => {
       page = <APEFormPage1 />;
       break;
     case 2:
-      page = <h1>Page 2</h1>;
+      page = <APEFormPage2 />;
       break;
     case 3:
-      page = <h1>Page 3</h1>;
+      page = <APEFormPage3 />;
+      break;
+    case 4:
+      page = <APEFormPage4 />;
       break;
     default:
-      page = <h1>Page 1</h1>;
+      page = <APEFormPage1 />;
   }
 
   return (
@@ -49,7 +55,9 @@ export const APEForm = () => {
             </Button>
             <Button
               variant="default"
-              onClick={() => alert('Form submitted!')}
+              onClick={() => {
+                setCurrentPage(4);
+              }}
               style={{ display: currentPage === 3 ? 'block' : 'none' }}
             >
               Submit
