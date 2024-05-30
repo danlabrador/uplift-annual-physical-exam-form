@@ -13,7 +13,7 @@ export const LabelledInput = ({ label, id, isVertical, children }: LabelledInput
       <Label className={'text-sm'} htmlFor={id}>
         {label}
       </Label>
-      <div className={'flex gap-2' + orientationProps}>{children}</div>
+      <div className={'flex gap-2 mt-2' + orientationProps}>{children}</div>
     </div>
   );
 };
