@@ -40,7 +40,7 @@ export const APEForm = () => {
             <Button
               variant="secondary"
               onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-              style={{ display: currentPage === 1 ? 'none' : 'block' }}
+              style={{ display: currentPage === 1 || currentPage === 4 ? 'none' : 'block' }}
             >
               Previous
             </Button>
@@ -49,7 +49,7 @@ export const APEForm = () => {
               variant="secondary"
               onClick={() => setCurrentPage(prev => Math.min(3, prev + 1))}
               disabled={currentPage === 3}
-              style={{ display: currentPage === 3 ? 'none' : 'block' }}
+              style={{ display: currentPage === 3 || currentPage === 4 ? 'none' : 'block' }}
             >
               Next
             </Button>
