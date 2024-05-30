@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+# Uplift: Annual Physical Exam
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The "Uplift: Annual Physical Exam" project is a multi-step form application designed to collect comprehensive information about the user's annual physical exam. The form is divided into several pages, each gathering specific details to ensure a thorough evaluation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to Use
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Ensure all dependencies are installed by running:
 
-- Configure the top-level `parserOptions` property like this:
+   ```sh
+   npm install
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Running the Application
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Start the application with:
+
+   ```sh
+   npm run dev
+   ```
+
+### Navigating the Form
+
+- The form is divided into multiple pages, navigable using "Next" and "Previous" buttons.
+- Fill out each page with the required information.
+- On the final page, submit the form to complete the process.
+
+## Limitations
+
+### Form Validation
+
+- Form validation has not been implemented yet. This will be added supposedly if the project is continued.
+
+### Resetting the Form
+
+- To reset the form, refresh the page. This is a temporary solution until a reset button is implemented.
+
+## Code Structure
+
+- `src/App.tsx`: The main entry point, now simplified to include the `APEForm` component.
+- `src/components/APEForm.tsx`: Manages the form page navigation and submission.
+- `src/components/APEFormPage1.tsx`, `src/components/APEFormPage2.tsx`, `src/components/APEFormPage3.tsx`, `src/components/APEFormPage4.tsx`: Individual form pages for collecting different sets of information.
+
+For any issues or further assistance, please refer to the project's repository or contact the maintainer.
