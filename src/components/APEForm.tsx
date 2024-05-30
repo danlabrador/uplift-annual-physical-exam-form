@@ -6,13 +6,28 @@ import { APEFormPage1 } from './APEFormPage1';
 export const APEForm = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
+  let page;
+  switch (currentPage) {
+    case 1:
+      page = <APEFormPage1 />;
+      break;
+    case 2:
+      page = <h1>Page 2</h1>;
+      break;
+    case 3:
+      page = <h1>Page 3</h1>;
+      break;
+    default:
+      page = <h1>Page 1</h1>;
+  }
+
   return (
     <>
       <Card className="max-w-[1024px] mx-auto px-8 py-6">
         <CardHeader>
           <h1 className="text-3xl font-bold">Annual Physical Exam Form</h1>
         </CardHeader>
-        <APEFormPage1 />
+        {page}
         <CardFooter className="justify-between">
           <div className="flex w-full justify-between">
             <div style={{ display: currentPage === 1 ? 'block' : 'none' }}></div>
